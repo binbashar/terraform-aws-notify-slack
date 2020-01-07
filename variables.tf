@@ -16,6 +16,12 @@ variable "lambda_function_name" {
   default     = "notify_slack"
 }
 
+variable "lambda_description" {
+  description = "The description of the Lambda function"
+  type        = string
+  default     = null
+}
+
 variable "sns_topic_name" {
   description = "The name of the SNS topic to create"
   type        = string
@@ -46,6 +52,11 @@ variable "kms_key_arn" {
   description = "ARN of the KMS key used for decrypting slack webhook url"
   type        = string
   default     = ""
+}
+
+variable "log_events" {
+  description = "Boolean flag to enabled/disable logging of incoming events"
+  default     = false
 }
 
 variable "reserved_concurrent_executions" {

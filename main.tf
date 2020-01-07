@@ -77,6 +77,7 @@ resource "aws_lambda_function" "notify_slack" {
   filename = data.archive_file.notify_slack[0].output_path
 
   function_name = var.lambda_function_name
+  description   = var.lambda_description
 
   role                           = aws_iam_role.lambda[0].arn
   handler                        = "notify_slack.lambda_handler"
@@ -92,6 +93,7 @@ resource "aws_lambda_function" "notify_slack" {
       SLACK_CHANNEL     = var.slack_channel
       SLACK_USERNAME    = var.slack_username
       SLACK_EMOJI       = var.slack_emoji
+      LOG_EVENTS        = var.log_events ? "True" : "False"
     }
   }
 
@@ -104,5 +106,5 @@ resource "aws_lambda_function" "notify_slack" {
     ]
   }
 
-  depends_on = ["aws_cloudwatch_log_group.lambda"]
+  depends_on = [aws_cloudwatch_log_group.lambda]
 }

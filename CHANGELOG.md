@@ -3,9 +3,64 @@
 
 
 
+<a name="v2.8.0"></a>
+## [v2.8.0] - 2019-12-21
+
+- Added lambda description and improved Lambda IAM policy for KMS ([#56](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/56))
+
+
+<a name="v2.7.0"></a>
+## [v2.7.0] - 2019-12-20
+
+- Updated CHANGELOG
+- Added support for multiline messages ([#55](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/55))
+
+
+<a name="v2.6.0"></a>
+## [v2.6.0] - 2019-12-20
+
+- Updated CHANGELOG
+- Added pytest and logging (based on [#27](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/27)) ([#54](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/54))
+
+
+<a name="v2.5.0"></a>
+## [v2.5.0] - 2019-12-20
+
+- Updated CHANGELOG
+- Updated formatting
+- use 0.12 syntax for depends_on ([#51](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/51))
+
+
+<a name="v2.4.0"></a>
+## [v2.4.0] - 2019-12-10
+
+- Updated CHANGELOG
+- Use urllib.parse.quote for the alarm name ([#35](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/35))
+- Updated simple example a bit
+- Updated CHANGELOG
+- Create AWS Cloudwatch log group and give explicit access to it ([#40](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/40))
+- Updated CHANGELOG
+- Added support for reserved_concurrent_executions
+- Updated CHANGELOG
+- Updated docs, python3.7
+- Add support for resource tagging ([#45](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/45))
+- Updated CHANGELOG
+- Upgraded module to support Terraform 0.12 ([#36](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/36))
+
+
+<a name="v1.14.0"></a>
+## [v1.14.0] - 2019-11-08
+
+- Updated CHANGELOG
+- Added CHANGELOG
+- Updated pre-commit hooks
+- Reduce scope of IAM Policy for CloudWatch Logs ([#44](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/44))
+
+
 <a name="v2.3.0"></a>
 ## [v2.3.0] - 2019-11-08
 
+- Updated CHANGELOG
 - Create AWS Cloudwatch log group and give explicit access to it ([#40](https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/40))
 
 
@@ -144,7 +199,13 @@
 - Initial commit
 
 
-[Unreleased]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.3.0...HEAD
+[Unreleased]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.8.0...HEAD
+[v2.8.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.7.0...v2.8.0
+[v2.7.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.6.0...v2.7.0
+[v2.6.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.5.0...v2.6.0
+[v2.5.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.4.0...v2.5.0
+[v2.4.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v1.14.0...v2.4.0
+[v1.14.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.3.0...v1.14.0
 [v2.3.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.2.0...v2.3.0
 [v2.2.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.1.0...v2.2.0
 [v2.1.0]: https://github.com/terraform-aws-modules/terraform-aws-notify-slack/compare/v2.0.0...v2.1.0
