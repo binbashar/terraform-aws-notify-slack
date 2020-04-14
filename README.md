@@ -60,26 +60,36 @@ To run the tests:
         pytest functions/notify_slack_test.py
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | ~> 0.12.6 |
+| aws | ~> 2.35 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
 | archive | n/a |
-| aws | n/a |
+| aws | ~> 2.35 |
 | null | n/a |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| cloudwatch\_log\_group\_kms\_key\_id | The ARN of the KMS Key to use when encrypting log data for Lambda | `string` | n/a | yes |
+|------|-------------|------|---------|:--------:|
+| cloudwatch\_log\_group\_kms\_key\_id | The ARN of the KMS Key to use when encrypting log data for Lambda | `string` | `null` | no |
 | cloudwatch\_log\_group\_retention\_in\_days | Specifies the number of days you want to retain log events in log group for Lambda. | `number` | `0` | no |
 | cloudwatch\_log\_group\_tags | Additional tags for the Cloudwatch log group | `map(string)` | `{}` | no |
 | create | Whether to create all resources | `bool` | `true` | no |
 | create\_sns\_topic | Whether to create new SNS topic | `bool` | `true` | no |
+| iam\_role\_boundary\_policy\_arn | The ARN of the policy that is used to set the permissions boundary for the role | `string` | `null` | no |
+| iam\_role\_name\_prefix | A unique role name beginning with the specified prefix | `string` | `"lambda"` | no |
+| iam\_role\_policy\_name\_prefix | A unique policy name beginning with the specified prefix | `string` | `"lambda-policy-"` | no |
 | iam\_role\_tags | Additional tags for the IAM role | `map(string)` | `{}` | no |
 | kms\_key\_arn | ARN of the KMS key used for decrypting slack webhook url | `string` | `""` | no |
-| lambda\_description | The description of the Lambda function | `string` | n/a | yes |
+| lambda\_description | The description of the Lambda function | `string` | `null` | no |
 | lambda\_function\_name | The name of the Lambda function to create | `string` | `"notify_slack"` | no |
 | lambda\_function\_tags | Additional tags for the Lambda function | `map(string)` | `{}` | no |
 | log\_events | Boolean flag to enabled/disable logging of incoming events | `bool` | `false` | no |
@@ -90,7 +100,7 @@ To run the tests:
 | slack\_webhook\_url | The URL of Slack webhook | `string` | n/a | yes |
 | sns\_topic\_name | The name of the SNS topic to create | `string` | n/a | yes |
 | sns\_topic\_tags | Additional tags for the SNS topic | `map(string)` | `{}` | no |
-| subsription\_filter\_policy | A valid filter policy that will be used in the subscription to filter messages seen by the target resource | `string` | n/a | no |
+| subsription\_filter\_policy | (Optional) A valid filter policy that will be used in the subscription to filter messages seen by the target resource. | `string` | `null` | no |
 | tags | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
 ## Outputs
